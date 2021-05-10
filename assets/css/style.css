@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  font-family: "Rubik", sans-serif;
+  animation: float 1.6s infinite;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5%;
+  transition: 0.3s;
+  width: 32vw;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card2 {
+  height: 80vh;
+  width: 30vw;
+  background-image: url(../img/bg2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation-name: spin;
+  animation-duration: 205000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.divs {
+  margin: 2% 0;
+}
+#resThree {
+  width: 92%;
+  text-align: left;
+}
+
+select {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+}
+
+.move-in {
+  animation-name: move;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.move1 {
+  animation-delay: 1.3s;
+}
+
+.move2 {
+  animation-delay: 1.5s;
+}
+
+.move3 {
+  animation-delay: 1.7s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+
+@keyframes float {
+  0% {
+    tranform: translate(0, 2px);
+  }
+  50% {
+    transform: translate(0, 3px);
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 425px) {
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .card {
+    width: 80vw;
+    height: 50vh;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card2 {
+    height: 80vh;
+    width: 80vw;
+  }
+}
