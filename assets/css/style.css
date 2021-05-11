@@ -30,14 +30,14 @@ body {
   flex-direction: column;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: #ffffffc2;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 5%;
   transition: 0.3s;
-  width: 32vw;
-  height: 80vh;
+  width: 33vw;
+  height: 90vh;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -55,7 +55,7 @@ body {
   background-position: center;
   background-size: contain;
   animation-name: spin;
-  animation-duration: 205000ms;
+  animation-duration: 155s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   position: absolute;
@@ -74,15 +74,19 @@ body {
 .divs {
   margin: 2% 0;
 }
+
+#resTwo {
+  font-weight: 900;
+}
+
 #resThree {
-  width: 92%;
+  width: 94%;
   text-align: left;
 }
 
 select {
   width: 100%;
   font-family: "Rubik", sans-serif;
-  font-weight: 100;
 }
 
 .move-in {
@@ -148,9 +152,22 @@ select {
   }
 
   .card {
-    width: 80vw;
-    height: 50vh;
+    width: 85vw;
+    height: 60vh;
     position: relative;
+  }
+
+  #resThree {
+    width: 84%;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  select {
+    width: 80%;
   }
 
   .card:hover {
